@@ -13,3 +13,8 @@ Flight::set('httpcode', require './config/httpcode.php');
 //路由
 //收到欠款
 require './route/routegetmoney.php';
+
+
+
+
+Flight::start();
