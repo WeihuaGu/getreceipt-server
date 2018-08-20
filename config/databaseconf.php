@@ -18,7 +18,7 @@ return
 return 
 [
         'database_type' => 'mysql',
-        'database_name' => 'zhiyu',
+        'database_name' => 'getreceipt',
         'server' => 'localhost',
         'username' => 'root',
         'password' => 'XXXx',
