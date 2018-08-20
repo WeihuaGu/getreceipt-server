@@ -8,7 +8,7 @@
 ### 安装
 - 将项目放到服务器，然后运行`composer install` 
 
-- 配置服务器，将请求搞到inde.php
+- 配置服务器，将请求搞到index.php
 比如apache 
 ```
 RewriteEngine On
