@@ -27,3 +27,11 @@ server {
 - 配置config目录下的数据库配置文件，推荐用环境变量，如果不配置环境变量用下面的直接填写数据库帐号密码
 
 - 这个时候访问/会出现"愿你赚很多钱",如果数据库配置正确访问/database/info会出现你的数据库信息
+
+
+
+
+
+
+##### 这个可搭配安卓客户端receiptnotice
+[receiptnotice](https://github.com/WeihuaGu/receiptnotice)
