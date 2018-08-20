@@ -21,6 +21,6 @@ return
         'database_name' => 'zhiyu',
         'server' => 'localhost',
         'username' => 'root',
-        'password' => '1992',
+        'password' => 'XXXx',
         'charset' => 'utf8'
     ];
