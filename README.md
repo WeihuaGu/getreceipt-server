@@ -6,8 +6,24 @@
 
 
 ### 安装
-- 讲项目放到服务器，然后运行`composer install`
+- 将项目放到服务器，然后运行`composer install` 
 
+- 配置服务器，将请求搞到inde.php
+比如apache 
+```
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+```
+比如 Nginx
+```
+server {
+    location / {
+        try_files $uri $uri/ /index.php;
+    }
+}
+```
 - 配置config目录下的数据库配置文件，推荐用环境变量，如果不配置环境变量用下面的直接填写数据库帐号密码
 
-- 
+- 这个时候访问/会出现"愿你赚很多钱",如果数据库配置正确访问/database/info会出现你的数据库信息
