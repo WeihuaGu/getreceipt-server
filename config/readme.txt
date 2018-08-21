@@ -1,3 +1,6 @@
+
+
+httpcode.php
 请定义并返回合适的状态码
 
 为每一次的响应返回合适的HTTP状态码. 好的响应应该使用如下的状态码:
@@ -21,4 +24,6 @@
     500 Internal Server Error: 服务器错误，确认状态并报告问题
 
 对于用户错误和服务器错误情况状态码，参考： HTTP response code spec
- 
+
+databaseconf.php
+如果懒得配置环境变量，直接改databaseconf.php下面的那个数组，用户名，密码改成自己的mysql用户名和密码就好了
