@@ -22,7 +22,7 @@ public function __construct(){
 
     catch(Exception $e){
  	echo 'Message: ' .$e->getMessage();
-	Flight::halt(500, 'get database faild');
+	Flight::halt(Flight::get('httpcode')['get_database_object_faild'], 'get_database_object_faild');
         }
     
 }
