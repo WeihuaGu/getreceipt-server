@@ -26,7 +26,7 @@ server {
 ```
 - 配置config目录下的数据库配置文件，推荐用环境变量，如果不配置环境变量或者数据库连接出错，直接用下面的数组直接填写数据库帐号密码
 
-- 拿本机localhost举例，这个时候访问http://localhost/会出现"愿你赚很多钱",如果数据库配置正确访问http://localhost/database/info会出现你的数据库信息
+- 拿本机localhost举例，这个时候访问`http://localhost/`会出现"愿你赚很多钱",如果数据库配置正确访问`http://localhost/database/info`会出现你的数据库信息
 
 
 
