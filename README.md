@@ -24,6 +24,8 @@ server {
     }
 }
 ```
+- 创建数据库getreceipt，当然你也可以叫其它名字：`CREATE DATABASE getreceipt`,然后将model目录下的model.sql导入getreceipt数据库中`mysql -u 用户名 -p 数据库名 < model.sql`
+
 - 配置config目录下的数据库配置文件，推荐用环境变量，如果不配置环境变量或者数据库连接出错，直接用下面的数组直接填写数据库帐号密码
 
 - 拿本机localhost举例，这个时候访问`http://localhost/`会出现"愿你赚很多钱",如果数据库配置正确访问`http://localhost/database/info`会出现你的数据库信息,比如我的是：
