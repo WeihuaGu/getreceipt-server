@@ -8,6 +8,7 @@ return
     'nocontent'=>204,
     'get_success_return_segment'=>206,
     'unauthorized'=>401,
-    'forbidden'=>403
+    'forbidden'=>403,
+    'get database object faild'=>503,
 
     ]; 
