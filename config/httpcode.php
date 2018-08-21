@@ -9,6 +9,6 @@ return
     'get_success_return_segment'=>206,
     'unauthorized'=>401,
     'forbidden'=>403,
-    'get database object faild'=>503,
+    'get_database_object_faild'=>503,
 
     ]; 
