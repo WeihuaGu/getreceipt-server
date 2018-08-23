@@ -1,6 +1,6 @@
 <?php
 
-interface IReceipt{
+interface IReceiptRecord{
 
 public recordReceipts($recore);
 public validRdcord($recore);
