@@ -9,7 +9,9 @@ public function __construct(){
 public recordReceipts($recored){
   if(validRecord($recored)){
   $this->database->insert($this->tablename,$recored);
-  }
+  return true;
+  }else
+      return false;
 }
 public validRecord($recored){
   return new ReceiptRecordValid.verify($recored);
