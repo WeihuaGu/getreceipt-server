@@ -1,8 +1,8 @@
 <?php
-
+namespace model;
 interface IReceiptRecord{
 
-public recordReceipts($recore);
-public validRdcord($recore);
+public recordReceipts($recored);
+public validRecord($recored);
 
 }
