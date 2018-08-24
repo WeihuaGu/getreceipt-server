@@ -10,7 +10,7 @@ public function nextData($data){
 return $data
 }
 
-public function transJsonname2TableColumname($data){
+public function transJsonArray2TableColumArray($data){
 return this->nextData($data);
 }
 }
