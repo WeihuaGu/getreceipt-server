@@ -1,8 +1,8 @@
 <?php
 namespace model;
-interface IReceiptRecord{
+Interface IReceiptRecord{
 
-public recordReceipts($recored);
-public validRecord($recored);
+public function recordReceipts($recored);
+public function validRecord($recored);
 
 }

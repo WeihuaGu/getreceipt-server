@@ -1,12 +1,11 @@
 <?php
 function getBodyJson(){
 $body = Flight::request()->getBody();
-$bodyjson=json_decode($body, false);
-return $bodyjson;
+return $body;
 }
 
 function json2Array($json){
 
+return json_decode($json, true);
 
-return null;
 }
