@@ -16,6 +16,8 @@ Flight::set('httpcode', require './config/httpcode.php');
 require './route/routedatabase.php';
 //获取到从客户端来的收款推送
 require './route/routegetmoney.php';
+//查询
+require './route/routequery.php';
 
 
 
