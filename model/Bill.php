@@ -1,5 +1,6 @@
 <?php
 namespace model;
+use Medoo\Medoo;
 class Bill extends Model implements IReceiptRecord {
 public $receiptvalid;
 public function __construct(){
@@ -8,7 +9,12 @@ public function __construct(){
    $this->receiptvalid=new ReceiptRecordValid(); 
    
 }
-
+public function queryByTime_Now(){
+   $where=Medoo::raw('where time>=DATE_SUB(NOW(),INTERVAL 3 MINUTE)');
+   $datas = $this->database->select($this->tablename,"*",$where);
+   return $datas;
+	
+}
 public function recordReceipts($recored){
   if($this->validRecord($recored)){
   $recored=$this->receiptvalid->transJsonArray2TableColumArray($recored);
