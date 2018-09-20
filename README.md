@@ -32,6 +32,11 @@ server {
 ```
 {"desc":{"server":"Uptime: 11108  Threads: 1  Questions: 2304  Slow queries: 0  Opens: 238  Flush tables: 1  Open tables: 219  Queries per second avg: 0.207","driver":"mysql","client":"mysqlnd 5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387 $","version":"5.7.23-0ubuntu0.18.04.1","connection":"Localhost via UNIX socket"}}
 ```
+#### RestFul Api
+| 作用 | 方式 | 请求地址 | 参数或POST data |
+|:|:|:|:|
+|接收客户端收款推送 | POST | /getedmoney/ | 示例json {"time":"2018-09-20 23:18:00","money":"139.34","title":"微信支付","content":"测试收款"} |
+|查询当前时间有无收款 | GET | /querybill/now| |
 
 
 
