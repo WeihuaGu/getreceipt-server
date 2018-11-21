@@ -42,7 +42,7 @@ server {
 你可以在config目录下的main.php配置重要信息的输出加密，默认加密方法为'AES-128-CBC'，你可以用encryptflag的true或者false来控制是否启用加密输出
 例如原本的输出为：
 ```
-{"code":200,"desc":"now time item with in 3 minute","items":[{"id":"8","time":"2018-11-21 12:14:00","amount":"18.34","Platform":"\u5fae\u4fe1\u652f\u4ed8","content":"\u6d4b\u8bd5\u6536\u6b3e"}]}
+{"code":200,"desc":"now time item with in 3 minute","items":[{"id":"8","time":"2018-11-21 12:14:00","amount":"18.34","Platform":"微信支付","content":"测试收款"}]}
 ```
 就会变更为:
 ```
