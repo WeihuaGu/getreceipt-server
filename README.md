@@ -38,6 +38,17 @@ server {
 |接收客户端收款推送 | POST | /getedmoney/ | 示例json {"time":"2018-09-20 23:18:00","money":"139.34","title":"微信支付","content":"测试收款"} |
 |查询当前时间有无收款 | GET | /querybill/now| |
 
+### 配置及安全
+你可以在config目录下的main.php配置重要信息的输出加密，默认加密方法为'AES-128-CBC'，你可以用encryptflag的true或者false来控制是否启用加密输出
+例如原本的输出为：
+```
+{"code":200,"desc":"now time item with in 3 minute","items":[{"id":"8","time":"2018-11-21 12:14:00","amount":"18.34","Platform":"\u5fae\u4fe1\u652f\u4ed8","content":"\u6d4b\u8bd5\u6536\u6b3e"}]}
+```
+就会变更为:
+```
+{"code":200,"desc":"now time item with in 3 minute","items":[{"id":"HuNNft9i9CTggsSDlzl7og==","time":"hAKsChs\/svwTEzQs0nyNx\/qLMdDUY35jJFq6qmjsgHY=","amount":"h4UxI\/eG7QrqyFZl1pPYAg==","Platform":"BydkhOBrTOjG+rLWMcA+Dw==","content":"tRu1GenMhrsG0EulUAjZ6g=="}]}
+```
+
 
 
 
