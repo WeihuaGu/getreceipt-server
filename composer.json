@@ -2,11 +2,13 @@
     "require": {
         "catfan/Medoo": "^1.5",
         "mikecao/flight": "^1.3",
-        "lcobucci/jwt": "^3.2"
+        "lcobucci/jwt": "^3.2",
+        "lizhibin/php-mcrypt": "dev-master"
     },
      "autoload": {
         "psr-4": {
-            "model\\": "model/"
+            "model\\": "model/",
+	    "util\\": "util/"
         }
     }
 }

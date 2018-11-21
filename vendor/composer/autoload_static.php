@@ -12,6 +12,10 @@ class ComposerStaticInitde98e413886ccd336ae42914b6b8de2a
     );
 
     public static $prefixLengthsPsr4 = array (
+        'u' => 
+        array (
+            'util\\' => 5,
+        ),
         'm' => 
         array (
             'model\\' => 6,
@@ -19,6 +23,7 @@ class ComposerStaticInitde98e413886ccd336ae42914b6b8de2a
         'M' => 
         array (
             'Medoo\\' => 6,
+            'Mcrypt\\' => 7,
         ),
         'L' => 
         array (
@@ -27,6 +32,10 @@ class ComposerStaticInitde98e413886ccd336ae42914b6b8de2a
     );
 
     public static $prefixDirsPsr4 = array (
+        'util\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/util',
+        ),
         'model\\' => 
         array (
             0 => __DIR__ . '/../..' . '/model',
@@ -34,6 +43,10 @@ class ComposerStaticInitde98e413886ccd336ae42914b6b8de2a
         'Medoo\\' => 
         array (
             0 => __DIR__ . '/..' . '/catfan/medoo/src',
+        ),
+        'Mcrypt\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lizhibin/php-mcrypt/src/Mcrypt',
         ),
         'Lcobucci\\JWT\\' => 
         array (

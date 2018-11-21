@@ -1,17 +1,17 @@
 [
     {
         "name": "catfan/medoo",
-        "version": "v1.5.7",
-        "version_normalized": "1.5.7.0",
+        "version": "v1.6",
+        "version_normalized": "1.6.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/catfan/Medoo.git",
-            "reference": "8d90cba0e8ff176028847527d0ea76fe41a06ecf"
+            "reference": "45047e013105d95569c1b66167d788dfd3f1102b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/catfan/Medoo/zipball/8d90cba0e8ff176028847527d0ea76fe41a06ecf",
-            "reference": "8d90cba0e8ff176028847527d0ea76fe41a06ecf",
+            "url": "https://api.github.com/repos/catfan/Medoo/zipball/45047e013105d95569c1b66167d788dfd3f1102b",
+            "reference": "45047e013105d95569c1b66167d788dfd3f1102b",
             "shasum": ""
         },
         "require": {
@@ -27,7 +27,7 @@
             "ext-pdo_sqlite": "For SQLite database",
             "ext-pdo_sqlsrv": "For MSSQL database"
         },
-        "time": "2018-06-14T18:59:08+00:00",
+        "time": "2018-10-08T07:13:05+00:00",
         "type": "framework",
         "installation-source": "dist",
         "autoload": {
@@ -62,17 +62,17 @@
     },
     {
         "name": "lcobucci/jwt",
-        "version": "3.2.2",
-        "version_normalized": "3.2.2.0",
+        "version": "3.2.5",
+        "version_normalized": "3.2.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/lcobucci/jwt.git",
-            "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c"
+            "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/lcobucci/jwt/zipball/0b5930be73582369e10c4d4bb7a12bac927a203c",
-            "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c",
+            "url": "https://api.github.com/repos/lcobucci/jwt/zipball/82be04b4753f8b7693b62852b7eab30f97524f9b",
+            "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b",
             "shasum": ""
         },
         "require": {
@@ -90,7 +90,7 @@
         "suggest": {
             "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
         },
-        "time": "2017-09-01T08:23:26+00:00",
+        "time": "2018-11-11T12:22:26+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -118,6 +118,57 @@
         "keywords": [
             "JWS",
             "jwt"
+        ]
+    },
+    {
+        "name": "lizhibin/php-mcrypt",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lizhibin205/lizhibin-php-mcrypt.git",
+            "reference": "a772734c204b352f775b57f69936aa035d505b67"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lizhibin205/lizhibin-php-mcrypt/zipball/a772734c204b352f775b57f69936aa035d505b67",
+            "reference": "a772734c204b352f775b57f69936aa035d505b67",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2017-06-16T02:48:01+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Mcrypt\\": "src/Mcrypt/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "lizhibin",
+                "homepage": "http://blog.csdn.net/loophome"
+            }
+        ],
+        "description": "php-des library",
+        "homepage": "https://github.com/lizhibin205/lizhibin-php-mcrypt",
+        "keywords": [
+            "des mcrypt",
+            "security"
         ]
     },
     {

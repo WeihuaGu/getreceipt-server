@@ -27,3 +27,6 @@ httpcode.php
 
 databaseconf.php
 如果懒得配置环境变量，直接改databaseconf.php下面的那个数组，用户名，密码改成自己的mysql用户名和密码就好了
+
+main.php
+    security用于加密输出，支持openssl_get_cipher_methods()支持的加密方法。
