@@ -49,6 +49,9 @@ server {
 {"code":200,"desc":"now time item with in 3 minute","items":[{"id":"HuNNft9i9CTggsSDlzl7og==","time":"hAKsChs\/svwTEzQs0nyNx\/qLMdDUY35jJFq6qmjsgHY=","amount":"h4UxI\/eG7QrqyFZl1pPYAg==","Platform":"BydkhOBrTOjG+rLWMcA+Dw==","content":"tRu1GenMhrsG0EulUAjZ6g=="}]}
 ```
 
+加密使用的是php的openssl_encrypt函数，关于加密及解密可以查看php官方文档：
+http://php.net/manual/zh/function.openssl-encrypt.php
+
 
 
 
