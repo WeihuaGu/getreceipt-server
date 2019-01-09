@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "^4.16.4",
+    "multer": "^1.4.1"
+  }
+}
