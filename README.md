@@ -1,6 +1,9 @@
 # getreceipt-server
 这个是个人收款的服务端，搭配receiptnotice的安卓端
 
+## 支持php与nodeJS
+PHP 位于主分支， nodejs位于nodejs分支
+
 ### 才刚开始写
 想法是用最简单的php的flight微框架
 
