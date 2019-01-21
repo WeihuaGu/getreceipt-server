@@ -5,7 +5,11 @@ var incomeBillSchema = new Schema({
         time: Date,
         amount: String,
         platform: String,
-        content: String
+        content: String,
+        updatetime: {
+                type: Date,
+                default: Date.now
+        }
 });
 
 incomeBillSchema.methods.getAmount = function(price) {
@@ -13,6 +17,10 @@ incomeBillSchema.methods.getAmount = function(price) {
 }
 
 incomeBillSchema.methods.encryptImportance = function() {
+       // this.time=cipher.encrypt(this.time.toString());
+      this.amount=cipher.encrypt(this.amount);
+      //this.platform=cipher.encrypt(this.platform);
+      this.content=cipher.encrypt(this.content);
 
 }
 
