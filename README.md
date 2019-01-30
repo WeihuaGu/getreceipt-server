@@ -7,6 +7,7 @@
 
 ### 安装
 
+在根目录或者子目录有package.json文件时，运行
 `npm install`
 
 ### 配置mongodb的连接url
