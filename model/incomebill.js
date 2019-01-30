@@ -73,3 +73,23 @@ module.exports.findOneIncomeBillById = (id, callback) => {
                 callback(null, book);
         });
 }
+
+module.exports.getOneItemByTime = (time,delay,callback)=>{
+	if(time==undefined)
+		;
+	if(delay==undefined)
+		delay=3;
+	IncomeBill.find({"time":{"$gte":time.getMinutes()-delay,"$lt":time.getMinutes()+delay}},(err,result)=>{
+		if(err) callback(err,null);
+		callback(null,result);
+	
+	});
+
+
+
+
+
+
+
+
+}
