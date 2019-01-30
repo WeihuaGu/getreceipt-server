@@ -36,3 +36,9 @@ module.exports.addOneIncomeBillItem = (item, callback) => {
         });
 }
 
+module.exports.getNowIncomeBillItem = (callback) =>{
+        bill.getOneItemByTime(null,null,(err,result)=>{
+                if(err) callback(err,null);
+                callback(null,result);
+        });
+}

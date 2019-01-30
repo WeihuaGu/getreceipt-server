@@ -16,4 +16,11 @@ router.post('/getedmoney/',function(req,res) {
         });
 });
 
+router.get('/querybill/now',function(req,res) {
+        billtransaction.getNowIncomeBillItem((err,result)=>{
+                if(err) res.json({err:err});
+                res.json(result);
+        });
+});
+
 module.exports = router;
