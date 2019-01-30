@@ -7,6 +7,13 @@
 
 ### 安装
 
+`npm install`
+
+### 配置mongodb的连接url
+
+配置环境变量`mongodbfinaninurl`
+或者直接在model/model.js中指定mongodburl（连接地址 例如mongodb://用户名:密码@地址:端口/数据库名）
+
 ### RestFul Api
 | 作用 | 方式 | 请求地址 | 参数或POST data |
 |-|-|-|-|
