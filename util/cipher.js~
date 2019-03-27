@@ -28,7 +28,7 @@ module.exports.decrypt = (str) => {
 module.exports.decryptReceived = (str) => {
         iv = postsecret;
         var clearEncoding = 'utf8';
-        var cipherEncoding = 'hex';
+        var cipherEncoding = 'base64';
         var cipherChunks = [];
         var decipher = crypto.createDecipheriv('des-cbc', postsecret, iv);
         decipher.setAutoPadding(true);

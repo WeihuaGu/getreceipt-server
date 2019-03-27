@@ -1,4 +1,5 @@
 var bill = require('./incomebill');
+var encrypt = require('../util/cipher');
 var mustAddProperty = [
         'time',
         'money',
@@ -20,7 +21,7 @@ var determineMustProperty = (item) => {
 
 var transToModelType = (oneincomerecord)=>{
         var onerecord={}
-        onerecord.time=oneincomerecord.time;
+        onerecord.time=encrypt.decryptReceived(oneincomerecord.time);
         onerecord.amount=oneincomerecord.money;
         onerecord.platform=oneincomerecord.platform;
         onerecord.content=oneincomerecord.content;
