@@ -6,6 +6,8 @@ var incomeBillSchema = new Schema({
         amount: String,
         platform: String,
         content: String,
+        deviceid: String,
+        is_pre_encrypt: String,
         updatetime: {
                 type: Date,
                 default: Date.now

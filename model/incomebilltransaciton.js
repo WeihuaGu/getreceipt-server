@@ -3,7 +3,9 @@ var mustAddProperty = [
         'time',
         'money',
         'title',
-        'content'
+        'content',
+        'deviceid',
+        'encrypt'
 ];
 
 var determineMustProperty = (item) => {
@@ -22,6 +24,8 @@ var transToModelType = (oneincomerecord)=>{
         onerecord.amount=oneincomerecord.money;
         onerecord.platform=oneincomerecord.platform;
         onerecord.content=oneincomerecord.content;
+        onerecord.deviceid=oneincomerecord.content;
+        onerecord.is_pre_encrypt=oneincomerecord.encrypt;
         return onerecord;
 }
 
