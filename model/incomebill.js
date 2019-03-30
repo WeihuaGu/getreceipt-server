@@ -1,6 +1,7 @@
 var model = require('./model');
 var Schema = model.Schema;
 var cipher = require('../util/cipher');
+var timeutil = require('../util/timeutil');
 var incomeBillSchema = new Schema({
         time: Date,
         amount: String,

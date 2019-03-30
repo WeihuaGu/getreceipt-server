@@ -3,6 +3,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var billapi = require('./api/bill');
 
+process.env.TZ="Asia/Shanghai";
+
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.all('*',function (req, res, next) {

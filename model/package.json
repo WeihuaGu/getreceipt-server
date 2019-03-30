@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "jsonwebtoken": "^8.4.0",
+    "moment-timezone": "^0.5.23",
     "mongoose": "^5.3.13",
     "mongoose-unique-validator": "^2.0.2"
   }

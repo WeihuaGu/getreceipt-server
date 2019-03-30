@@ -1,5 +1,6 @@
 var bill = require('./incomebill');
 var encrypt = require('../util/cipher');
+var timeutil = require('../util/timeutil');
 var mustAddProperty = [
         'time',
         'money',
@@ -20,8 +21,11 @@ var determineMustProperty = (item) => {
 }
 
 var transToModelType = (oneincomerecord)=>{
-        var onerecord={}
-        onerecord.time=encrypt.decryptReceived(oneincomerecord.time);
+        var onerecord={};
+        var localtime=encrypt.decryptReceived(oneincomerecord.time);
+        console.log("time直接解码得"+localtime);
+        onerecord.time=timeutil.getUTC(localtime);
+        console.log("time转为UTC得"+onerecord.time);
         onerecord.amount=oneincomerecord.money;
         onerecord.platform=oneincomerecord.platform;
         onerecord.content=oneincomerecord.content;

@@ -1,14 +1,13 @@
 {
   "dependencies": {
     "express": "^4.16.4",
-    "multer": "^1.4.1",
     "jsonwebtoken": "^8.4.0",
+    "moment-timezone": "^0.5.23",
     "mongoose": "^5.3.13",
-    "mongoose-unique-validator": "^2.0.2"
-
+    "mongoose-unique-validator": "^2.0.2",
+    "multer": "^1.4.1"
   },
   "scripts": {
     "start": "node app"
   }
-
 }
