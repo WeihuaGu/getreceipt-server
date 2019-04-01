@@ -24,7 +24,10 @@ var transToModelType = (oneincomerecord)=>{
         var onerecord={};
         var localtime=encrypt.decryptReceived(oneincomerecord.time);
         console.log("time直接解码得"+localtime);
-        onerecord.time=timeutil.getUTC(localtime);
+        if (oneincomerecord.encrypt=="1")
+            onerecord.time=timeutil.getUTC(localtime);
+        else
+            onerecord.time=oneincomerecord.time;
         console.log("time转为UTC得"+onerecord.time);
         onerecord.amount=oneincomerecord.money;
         onerecord.platform=oneincomerecord.platform;
