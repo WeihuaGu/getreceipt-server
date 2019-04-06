@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var server = require('http').Server(app);
+const io=require('socket.io')(server);
 var bodyParser = require('body-parser');
 var billapi = require('./api/bill');
 
@@ -24,6 +26,18 @@ app.get('/', function(req, res) {
   res.send('愿你赚很多钱');
 });
 
-app.listen(3000, function () {
+
+io.on('connection',(socket)=>{
+    socket.on('echo',(devicestr)=>{
+        device=JSON.parse(devicestr);
+        console.log("new device_echo from "+device['deviceid']+" with time"+device['connectedtime']);
+    });
+    socket.on('disconnect',()=>{
+        console.log("device disconnect");
+    });
+});
+
+
+server.listen(3000, function () {
   console.log('app listening on port 3000!');
 });
