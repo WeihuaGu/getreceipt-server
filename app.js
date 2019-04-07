@@ -4,6 +4,7 @@ var server = require('http').Server(app);
 const io=require('socket.io')(server);
 var bodyParser = require('body-parser');
 var billapi = require('./api/bill');
+var deviceapi = require('./api/device');
 
 process.env.TZ="Asia/Shanghai";
 
@@ -21,18 +22,24 @@ app.all('*',function (req, res, next) {
   }
 });
 app.use('/bill',billapi);
+app.use('/device',deviceapi);
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function(req, res) {
   res.send('愿你赚很多钱');
 });
 
-
+global.deviceisonline=false;
 io.on('connection',(socket)=>{
     socket.on('echo',(devicestr)=>{
         device=JSON.parse(devicestr);
+        global.deviceid=device['deviceid'];
+        global.deviceisonline=true;
+        global.deviceconnectedtime=device['connectedtime'];
         console.log("new device_echo from "+device['deviceid']+" with time"+device['connectedtime']);
     });
     socket.on('disconnect',()=>{
+        global.deviceisonline=false;
+        global.devicedisconnectedtime=new Date();
         console.log("device disconnect");
     });
 });
