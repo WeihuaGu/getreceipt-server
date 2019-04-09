@@ -35,7 +35,7 @@ io.on('connection',(socket)=>{
         global.deviceid=device['deviceid'];
         global.deviceisonline=true;
         global.deviceconnectedtime=device['connectedtime'];
-        console.log("new device_echo from "+device['deviceid']+" with time"+device['connectedtime']);
+        console.log("new device_echo from "+device['deviceid']+" with time "+device['connectedtime']+" and socketid is: "+socket.id);
     });
     socket.on('disconnect',()=>{
         global.deviceisonline=false;
