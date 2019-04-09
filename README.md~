@@ -27,7 +27,6 @@ nodejs位于nodejs分支,PHP 位于php分支
 |-|-|-|-|
 |接收客户端收款推送 | POST | /bill/getedmoney/ | 示例json {"time":"2018-09-20 23:18:00","money":"139.34","title":"微信支付","content":"测试收款","deviceid":"yourdeviceid","encrypt":"0"} |
 |查询当前时间有无收款 | GET | /bill/querybill/now| |
-|查询设备是否在线 | GET | /device/isonline/deviceid | 例如 /device/isonline/mi4c (deviceid为客户端设置里填写的内容) |
 
 ### 配置及安全
 

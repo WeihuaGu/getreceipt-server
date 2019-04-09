@@ -9,9 +9,18 @@ router.get('/', function(req, res) {
 });
 
 router.get('/isonline/:id',function(req,res) {
-                if(req.params.id!=global.deviceid) res.json({code:404,msg:"deviceid error"});
-                if(global.deviceisonline!=true) res.json({code:400,msg:"device offline"});
-                if(global.deviceisonline==true) res.json({code:200,msg:"device online"});
+                if(req.params.id!=global.deviceid) {
+                    res.json({code:404,msg:"deviceid error"});
+                    return;
+                }
+                if(global.deviceisonline!=true) {
+                    res.json({code:400,msg:"device offline"});
+                    return;
+                }
+                if(global.deviceisonline==true) {
+                    res.json({code:200,msg:"device online"});
+                    return;
+                }
 
 });
 
