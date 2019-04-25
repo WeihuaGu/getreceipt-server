@@ -5,6 +5,7 @@ const io=require('socket.io')(server);
 var bodyParser = require('body-parser');
 var billapi = require('./api/bill');
 var deviceapi = require('./api/device');
+var clientecho = require('./model/clientecho');
 
 process.env.TZ="Asia/Shanghai";
 
@@ -28,19 +29,16 @@ app.get('/', function(req, res) {
   res.send('愿你赚很多钱');
 });
 
-global.deviceisonline=false;
+global.socketlist=[];
 io.on('connection',(socket)=>{
     socket.on('echo',(devicestr)=>{
         device=JSON.parse(devicestr);
-        global.deviceid=device['deviceid'];
-        global.deviceisonline=true;
-        global.deviceconnectedtime=device['connectedtime'];
+        global.socketlist.push({socketid:socket.id,deviceid:device['deviceid'],connectedtime:device['connectedtime']});
         console.log("new device_echo from "+device['deviceid']+" with time "+device['connectedtime']+" and socketid is: "+socket.id);
     });
     socket.on('disconnect',()=>{
-        global.deviceisonline=false;
-        global.devicedisconnectedtime=new Date();
-        console.log("device disconnect");
+        console.log("device disconnect with socketid "+socket.id);
+        clientecho.removeSocket(socket.id);
     });
 });
 
