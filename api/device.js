@@ -17,7 +17,7 @@ router.get('/isonline/:id',function(req,res) {
                 }
 
                 else{
-                    res.json({code:400,msg:"device offline"});
+                    res.json({code:404,msg:"device offline"});
                     return;
                 }
 
