@@ -1,6 +1,6 @@
 const config = require('config');
 var configuserid;
-if (process.env.financepass)
+if (process.env.transfercode_userid)
         configuserid = process.env.transfercode_userid;
 else
         configuserid = config.get('transfercode.userid'); //

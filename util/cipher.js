@@ -1,4 +1,5 @@
 var crypto = require('crypto');
+const config = require('config');
 var secret;
 if (process.env.financepass)
         secret = process.env.financepass;
@@ -9,7 +10,7 @@ var postsecret;
 if (process.env.financepostpass)
         postsecret = process.env.financepostpass;
 else
-        postsecret = 'pass'; //密钥
+        postsecret = config.get('secret.financepostpass'); //密钥
 
 module.exports.encrypt = (str) => {
         var cipher = crypto.createCipher('aes192', secret);
