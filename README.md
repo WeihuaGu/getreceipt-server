@@ -30,6 +30,7 @@ nodejs位于nodejs分支,PHP 位于php分支
 |查询设备是否在线 | GET | /device/isonline/deviceid | 例如 /device/isonline/mi4c (deviceid为客户端设置里填写的内容) |
 
 #### 支付宝相关api
+##### 生成任意金额的转账码
 | 作用 | 方式 | 请求地址 | 参数或POST data |
 |-|-|-|-|
 |下面两个需要在config目录下配置userid|收款码即userid的取得参考wiki| | |
