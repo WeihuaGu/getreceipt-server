@@ -4,7 +4,9 @@ bill.list(null, (err, bills) => {
                 console.log(bills);
 });
 **/
-var transfercode = require('./transfercode');
+console.log('test ……');
+console.log("test transfercode uri");
+var transfercode = require('./model/transfercode');
 console.log(transfercode.getTransferCodeUri("34.5"));
 
 

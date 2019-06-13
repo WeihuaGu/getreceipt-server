@@ -5,6 +5,7 @@ const io=require('socket.io')(server);
 var bodyParser = require('body-parser');
 var billapi = require('./api/bill');
 var deviceapi = require('./api/device');
+var showapi = require('./api/show');
 var clientecho = require('./model/clientecho');
 
 process.env.TZ="Asia/Shanghai";
@@ -24,6 +25,7 @@ app.all('*',function (req, res, next) {
 });
 app.use('/bill',billapi);
 app.use('/device',deviceapi);
+app.use('/show',showapi);
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function(req, res) {
   res.send('愿你赚很多钱');
