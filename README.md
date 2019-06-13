@@ -29,6 +29,15 @@ nodejs位于nodejs分支,PHP 位于php分支
 |查询当前时间有无收款 | GET | /bill/querybill/now| |
 |查询设备是否在线 | GET | /device/isonline/deviceid | 例如 /device/isonline/mi4c (deviceid为客户端设置里填写的内容) |
 
+#### 支付宝相关api
+| 作用 | 方式 | 请求地址 | 参数或POST data |
+|-|-|-|-|
+|下面两个需要在config目录下配置userid|收款码即userid的取得参考wiki| | |
+|生产任意金额的转账码uri|GET|/show/alipay/get_transfer_code_uri/金额|例如 /show/alipay/get_transfer_code_uri/66.66|
+|生产任意金额的转账码(会直接返回png格式的转账码图片|GET|/show/alipay/get_transfer_code/金额|例如 /show/alipay/get_transfer_code_uri/66.66|
+|下面两个可以不配置userid|需要你在请求里附带userid| | |
+|生产任意金额的转账码uri|GET|/show/alipay/get_transfer_code_uri/金额/withuserid/你的userid|例如 /show/alipay/get_transfer_code_uri/66.66/withuserid/735648|
+|生产任意金额的转账码(会直接返回png格式的转账码图片|GET|/show/alipay/get_transfer_code/金额/withuserid/你的userid|例如 /show/alipay/get_transfer_code_uri/66.66/withuserid/735648|
 ### 配置及安全
 
 
