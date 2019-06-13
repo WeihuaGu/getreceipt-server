@@ -6,7 +6,6 @@ nodejs位于nodejs分支,PHP 位于php分支
 
 ### 安装
 
-在根目录或者子目录有package.json文件时，运行
 `npm install`
 
 ### 配置
