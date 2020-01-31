@@ -35,6 +35,7 @@ nodejs位于nodejs分支,PHP 位于php分支
 |下面两个需要在config目录下配置userid|收款码即userid的取得参考wiki| | |
 |生产任意金额的转账码uri|GET|/show/alipay/get_transfer_code_uri/金额|例如 /show/alipay/get_transfer_code_uri/66.66|
 |生产任意金额的转账码(会直接返回png格式的转账码图片|GET|/show/alipay/get_transfer_code/金额|例如 /show/alipay/get_transfer_code_uri/66.66|
+|生产任意金额并且附加备注的转账码(会直接返回png格式的转账码图片|GET|/show/alipay/get_transfer_code/金额/withremark/备注|例如 /show/alipay/get_transfer_code_uri/66.66/withremark/我给你转了一笔钱|
 |下面两个可以不配置userid|需要你在请求里附带userid| | |
 |生产任意金额的转账码uri|GET|/show/alipay/get_transfer_code_uri/金额/withuserid/你的userid|例如 /show/alipay/get_transfer_code_uri/66.66/withuserid/735648|
 |生产任意金额的转账码(会直接返回png格式的转账码图片|GET|/show/alipay/get_transfer_code/金额/withuserid/你的userid|例如 /show/alipay/get_transfer_code_uri/66.66/withuserid/735648|
