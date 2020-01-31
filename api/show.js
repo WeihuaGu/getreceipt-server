@@ -44,6 +44,22 @@ router.get('/alipay/get_transfer_code/:amount', function(req, res) {
                 }
         });
 });
+router.get('/alipay/get_transfer_code/:amount/withremark/:remark', function(req, res) {
+        transfercode.getTransferCodeUriPlusRemark(req.params.amount,req.params.remark, (err, result) => {
+                if (err)
+                        res.json({
+                                code: 404,
+                                msg: err
+                        });
+                else {
+                        var temp_qrcode = qr_image.image(result);
+                        res.type('png');
+                        temp_qrcode.pipe(res);
+
+
+                }
+        });
+});
 
 router.get('/alipay/get_transfer_code/fixed/:amount', function(req, res) {
         transfercode.getTransferCodeUri(req.params.amount, (err, result) => {
