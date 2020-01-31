@@ -42,4 +42,4 @@ module.exports.getTransferCodeUri=getTransferCodeUri;
 
 module.exports.getTransferCodeUriWithUserid=getTransferCodeUriWithUserid;
 
-
+module.exports.getTransferCodeUriPlusRemark=getTransferCodeUriPlusRemark;
